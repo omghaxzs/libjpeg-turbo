@@ -1476,13 +1476,6 @@ endif()
 
 install(TARGETS rdjpgcom wrjpgcom RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
 
-install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/README.ijg
-  ${CMAKE_CURRENT_SOURCE_DIR}/README.md ${CMAKE_CURRENT_SOURCE_DIR}/example.txt
-  ${CMAKE_CURRENT_SOURCE_DIR}/tjexample.c
-  ${CMAKE_CURRENT_SOURCE_DIR}/libjpeg.txt
-  ${CMAKE_CURRENT_SOURCE_DIR}/structure.txt
-  ${CMAKE_CURRENT_SOURCE_DIR}/usage.txt ${CMAKE_CURRENT_SOURCE_DIR}/wizard.txt
-  ${CMAKE_CURRENT_SOURCE_DIR}/LICENSE.md DESTINATION ${CMAKE_INSTALL_DOCDIR})
 if(WITH_JAVA)
   install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/java/TJExample.java
     DESTINATION ${CMAKE_INSTALL_DOCDIR})
@@ -1516,4 +1509,3 @@ include(cmakescripts/BuildPackages.cmake)
 configure_file("${CMAKE_CURRENT_SOURCE_DIR}/cmakescripts/cmake_uninstall.cmake.in"
   "cmake_uninstall.cmake" IMMEDIATE @ONLY)
 
-add_custom_target(uninstall COMMAND ${CMAKE_COMMAND} -P cmake_uninstall.cmake)
